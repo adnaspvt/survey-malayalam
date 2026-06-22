@@ -2519,116 +2519,80 @@ btnExportCSV.addEventListener('click', () => {
   }
   
   // Build Header Columns
-  const headers = ['RespondentID', 'Timestamp', 'A1_Age', 'A2_Gender', 'A3_Education', 'A4_Field', 'B5_Platform', 'B6_TimeSpend', 'B7_Content', 'B8_Sharing', 'B9_SeenFake', 'B10_FollowNews'];
+  const headers = [
+    'RespondentID', 'Timestamp', 
+    'Q1_Age', 'Q2_Gender', 'Q3_District', 'Q4_Education', 
+    'Q5_Platform', 'Q6_TimeSpend', 'Q7_Content',
+    'Q8_Adoption', 'Q9_Adoption', 'Q10_Adoption', 'Tech_Adoption_Score',
+    'Q11_Literacy', 'Q12_Literacy', 'Q13_Literacy', 'Media_Literacy_Score'
+  ];
   
-  // Section C scales q11 to q18
-  for (let i = 6; i <= 15; i++) headers.push(`B${i}_Literacy`);
-  headers.push('Literacy_Scale_Mean');
-  
-  // Section D scales q19 to q24
-  for (let i = 16; i <= 20; i++) headers.push(`C${i}_Verification`);
-  headers.push('Tech_Adoption_Scale_Mean');
-  
-  // Section E media assets
   const mediaSection = surveyConfig.sections.find(s => s.isMediaSection);
   const mediaItems = mediaSection ? mediaSection.mediaItems : [];
   
   mediaItems.forEach(item => {
-    headers.push(`E_${item.id}_Answer`);
-    headers.push(`E_${item.id}_Confidence`);
-    headers.push(`E_${item.id}_Correct`);
+    headers.push(`E_${item.id}_Classification`);
+    headers.push(`E_${item.id}_Clue`);
+    headers.push(`E_${item.id}_IsCorrect`);
   });
-  headers.push('AI_Detection_Accuracy_Rate');
-  
-  // Section F
-  headers.push('F28_HeardDeepfake', 'F29_AICommon', 'F30_AIMislead', 'F31_LabelAI', 'F32_TrustSocial', 'F33_YouthBetter');
-  
-  // Section G
-  headers.push('G34_OptionalThoughts');
+  headers.push('Detection_Score');
   
   // Row content mapping
   let csvContent = "data:text/csv;charset=utf-8," + headers.map(h => `"${h}"`).join(",") + "\n";
   
   responsesList.forEach(resp => {
-    const answers = resp.answers;
+    const answers = resp.answers || {};
     const row = [];
     
     row.push(resp.id);
     row.push(resp.timestamp);
     
-    // A
+    // Demographics
     row.push(answers.q1 || '');
     row.push(answers.q2 || '');
     row.push(answers.q3 || '');
     row.push(answers.q4 || '');
     
-    // B
+    // Behavior
     row.push(answers.q5 || '');
     row.push(answers.q6 || '');
-    row.push(answers.q7 || '');
-    row.push(answers.q8 || '');
-    row.push(answers.q9 || '');
-    row.push(answers.q10 || '');
+    row.push((answers.q7 || '').replace(/"/g, '""'));
     
-    // C Literacy Sum & mean
-    let litSum = 0;
-    let litCount = 0;
-    for (let i = 6; i <= 15; i++) {
-      const val = answers[`q${i}`];
-      row.push(val || '');
-      if (val !== undefined) {
-        litSum += parseInt(val);
-        litCount++;
-      }
-    }
-    row.push(litCount > 0 ? (litSum / litCount).toFixed(3) : '');
-    
-    // D Tech adoption sum & mean (handling reverse coding values for q23,q24 output averages)
+    // Tech Adoption
     let adoptSum = 0;
-    let adoptCount = 0;
-    for (let i = 16; i <= 20; i++) {
-      const val = answers[`q${i}`];
-      row.push(val || '');
-      if (val !== undefined) {
-        let score = parseInt(val);
-                adoptSum += score;
-        adoptCount++;
-      }
+    for (let i = 8; i <= 10; i++) {
+      row.push(answers[`q${i}`] || '');
+      let val = parseInt(answers[`q${i}`]);
+      if (!isNaN(val)) adoptSum += val;
     }
-    row.push(adoptCount > 0 ? (adoptSum / adoptCount).toFixed(3) : '');
+    row.push(adoptSum);
     
-    // E Media answers
+    // Media Literacy
+    let litSum = 0;
+    for (let i = 11; i <= 13; i++) {
+      row.push(answers[`q${i}`] || '');
+      let val = parseInt(answers[`q${i}`]);
+      if (!isNaN(val)) litSum += val;
+    }
+    row.push(litSum);
+    
+    // Media Answers
     let correctCount = 0;
     mediaItems.forEach(item => {
-      const choice = answers[item.id] || '';
-      const confidence = answers[`${item.id}_confidence`] || '';
-      const isCorrect = choice === (item.trueType === "real" ? "Authentic" : "AI-Generated");
+      const classification = answers[item.id] || '';
+      const clue = answers[`${item.id}_clue`] || '';
+      const isCorrect = classification === (item.trueType === "real" ? "Authentic" : "AI-Generated") ? 1 : 0;
       
-      row.push(choice);
-      row.push(confidence);
-      row.push(isCorrect ? '1' : '0'); // SPSS prefers binary numbers for boolean correctness
-      if (isCorrect) correctCount++;
+      row.push(classification);
+      row.push(clue.replace(/"/g, '""'));
+      row.push(isCorrect);
+      if (classification) correctCount += isCorrect;
     });
-    
-    const accRate = mediaItems.length > 0 ? ((correctCount / mediaItems.length) * 100).toFixed(1) : '0';
-    row.push(accRate);
-    
-    // F
-    row.push(answers.q28 || '');
-    row.push(answers.q29 || '');
-    row.push(answers.q30 || '');
-    row.push(answers.q31 || '');
-    row.push(answers.q32 || '');
-    row.push(answers.q33 || '');
-    
-    // G Open ended
-    const thoughts = (answers.q34 || '').replace(/"/g, '""'); // Escape CSV double quotes
-    row.push(thoughts);
+    row.push(correctCount);
     
     csvContent += row.map(val => `"${val}"`).join(",") + "\n";
   });
   
-  // Download Action trigger
   const encodedUri = encodeURI(csvContent);
   const link = document.createElement("a");
   link.setAttribute("href", encodedUri);
@@ -2638,6 +2602,8 @@ btnExportCSV.addEventListener('click', () => {
   document.body.removeChild(link);
   showAdminToast('Excel CSV file successfully downloaded!', 'success');
 });
+
+  
 
 // Trigger Mock Data Injection (AJAX & Client-Side Serverless Firebase REST)
 btnGenerateMock.addEventListener('click', async () => {
