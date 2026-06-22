@@ -33,5 +33,41 @@
     },
     "id": "resp_1782110776809_03cjpmiqm",
     "timestamp": "2026-06-22T06:46:16.811Z"
+  },
+  {
+    "id": "resp_mock_0_iv4ib",
+    "timestamp": "2026-06-14T17:53:04.177Z",
+    "answers": {
+      "participant_name": "Emily Watson (Mock #1)",
+      "q1": "45–54",
+      "q2": "Male",
+      "q3": "Kannur",
+      "q4": "Undergraduate",
+      "q5": "Facebook",
+      "q6": "1–2 hours",
+      "q7": "Lifestyle & Personal Connections (Friends' updates, travel, food, fashion)",
+      "q8": "1",
+      "q9": "3",
+      "q10": "1",
+      "q11": "3",
+      "q12": "3",
+      "q13": "2",
+      "m1": "Authentic",
+      "m1_clue": "Logical Context: Identifiable real-world backgrounds and perfectly readable text.",
+      "m2": "Authentic",
+      "m2_clue": "Logical Context: Identifiable real-world backgrounds and perfectly readable text.",
+      "m3": "AI-Generated",
+      "m3_clue": "Background/Text Errors: Unreadable or gibberish text, and illogical background elements.",
+      "m4": "AI-Generated",
+      "m4_clue": "I didn't see any specific technical mistake; I just guessed.",
+      "m5": "AI-Generated",
+      "m5_clue": "Lip-sync Mismatch: The audio does not properly align with the mouth movements.",
+      "m6": "AI-Generated",
+      "m6_clue": "Flickering/Glitches: Morphing edges around the face or an unstable, flickering background.",
+      "m7": "Authentic",
+      "m7_clue": "Natural Human Movements: Fluid body language and realistic, spontaneous facial expressions.",
+      "m8": "AI-Generated",
+      "m8_clue": "Lip-sync Mismatch: The audio does not properly align with the mouth movements."
+    }
   }
 ]

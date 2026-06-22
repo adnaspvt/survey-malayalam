@@ -448,7 +448,7 @@ function updateExecutiveMetrics() {
     // Literacy Score Averages (Q10-Q12)
     let litSum = 0;
     let litCount = 0;
-    for (let i = 10; i <= 12; i++) {
+    for (let i = 11; i <= 13; i++) {
       if (answers[`q${i}`] !== undefined) {
         litSum += parseInt(answers[`q${i}`]);
         litCount++;
@@ -459,7 +459,7 @@ function updateExecutiveMetrics() {
     // Tech Adoption Averages (Q7-Q8)
     let adoptSum = 0;
     let adoptCount = 0;
-    for (let i = 7; i <= 8; i++) {
+    for (let i = 8; i <= 10; i++) {
       if (answers[`q${i}`] !== undefined) {
         let val = parseInt(answers[`q${i}`]);
         adoptSum += val;
@@ -1268,7 +1268,7 @@ function runDescriptiveStatistics() {
     
     // Literacy
     let lCount = 0, lRow = 0;
-    for (let q = 10; q <= 12; q++) {
+    for (let q = 11; q <= 13; q++) {
       let score = parseInt(resp.answers[`q${q}`]);
       if (!isNaN(score)) { lRow += score; lCount++; }
     }
@@ -1278,7 +1278,7 @@ function runDescriptiveStatistics() {
     
     // Adoption
     let aCount = 0, aRow = 0;
-    for (let q = 7; q <= 8; q++) {
+    for (let q = 8; q <= 10; q++) {
       let score = parseInt(resp.answers[`q${q}`]);
       if (!isNaN(score)) {
                 aRow += score; 
@@ -1661,14 +1661,14 @@ window.runMultipleRegressionAnalysis = function() {
     Y.push(mediaItems.length > 0 ? (correctCount / mediaItems.length) * 100 : 0);
     
     let litSum = 0, litCount = 0;
-    for (let q = 10; q <= 12; q++) {
+    for (let q = 11; q <= 13; q++) {
       let score = parseInt(resp.answers[`q${q}`]);
       if (!isNaN(score)) { litSum += score; litCount++; }
     }
     X1.push(litCount > 0 ? litSum / litCount : 3.0);
     
     let adoptSum = 0, adoptCount = 0;
-    for (let q = 7; q <= 8; q++) {
+    for (let q = 8; q <= 10; q++) {
       let score = parseInt(resp.answers[`q${q}`]);
       if (!isNaN(score)) {
                 adoptSum += score; 
@@ -2089,7 +2089,7 @@ function renderCorrelationScatter() {
     // 1. Score Literacy (q11 - q18)
     let litSum = 0;
     let litCount = 0;
-    for (let q = 10; q <= 12; q++) {
+    for (let q = 11; q <= 13; q++) {
       if (answers[`q${q}`] !== undefined) {
         litSum += parseInt(answers[`q${q}`]);
         litCount++;
@@ -2228,7 +2228,7 @@ function renderDoiBellCurve() {
     const answers = resp.answers;
     let adoptSum = 0;
     let adoptCount = 0;
-    for (let q = 7; q <= 8; q++) {
+    for (let q = 8; q <= 10; q++) {
       if (answers[`q${q}`] !== undefined) {
         let val = parseInt(answers[`q${q}`]);
                 adoptSum += val;
@@ -2340,7 +2340,7 @@ function renderResponsesTable() {
     // Media Literacy Sum
     let litSum = 0;
     let litCount = 0;
-    for (let q = 10; q <= 12; q++) {
+    for (let q = 11; q <= 13; q++) {
       if (resp.answers[`q${q}`] !== undefined) {
         litSum += parseInt(resp.answers[`q${q}`]);
         litCount++;
@@ -2351,7 +2351,7 @@ function renderResponsesTable() {
     // Tech Adoption Sum
     let adoptSum = 0;
     let adoptCount = 0;
-    for (let q = 7; q <= 8; q++) {
+    for (let q = 8; q <= 10; q++) {
       if (resp.answers[`q${q}`] !== undefined) {
         let val = parseInt(resp.answers[`q${q}`]);
                 adoptSum += val;
@@ -2735,13 +2735,13 @@ btnGenerateMock.addEventListener('click', async () => {
         answers.q9 = profile === "tech-savvy-youth" ? "Yes" : fakes[Math.floor(Math.random() * fakes.length)];
         answers.q10 = Math.random() > 0.4 ? "Yes" : "No";
         
-        for (let q = 10; q <= 12; q++) {
+        for (let q = 11; q <= 13; q++) {
           let score = Math.round(literacyBias + (Math.random() * 2 - 1));
           score = Math.max(1, Math.min(5, score));
           answers[`q${q}`] = score;
         }
         
-        for (let q = 7; q <= 8; q++) {
+        for (let q = 8; q <= 10; q++) {
           let score;
           score = Math.round(techBias + (Math.random() * 2 - 1));
           score = Math.max(1, Math.min(5, score));
