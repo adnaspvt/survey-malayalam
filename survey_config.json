@@ -38,7 +38,7 @@
             "18 - 25",
             "26 - 35",
             "36 - 50",
-            "Above 50"
+            "50-ന് മുകളിൽ"
           ]
         },
         {
@@ -46,8 +46,8 @@
           "type": "radio",
           "text": "2. What is your gender?",
           "options": [
-            "Male",
-            "Female"
+            "പുരുഷൻ",
+            "സ്ത്രീ"
           ]
         },
         {
@@ -55,13 +55,13 @@
           "type": "dropdown",
           "text": "3. Which district in the Malabar region do you currently reside in?",
           "options": [
-            "Kasaragod",
-            "Kannur",
-            "Wayanad",
-            "Kozhikode",
-            "Malappuram",
-            "Palakkad",
-            "Thrissur"
+            "കാസർകോട്",
+            "കണ്ണൂർ",
+            "വയനാട്",
+            "കോഴിക്കോട്",
+            "മലപ്പുറം",
+            "പാലക്കാട്",
+            "തൃശ്ശൂർ"
           ]
         },
         {
@@ -69,10 +69,10 @@
           "type": "radio",
           "text": "4. What is your highest educational qualification?",
           "options": [
-            "High School / Plus Two",
-            "Undergraduate (Degree)",
-            "Postgraduate (PG)",
-            "Other"
+            "ഹൈസ്കൂൾ / പ്ലസ് ടു",
+            "ബിരുദം (ഡിഗ്രി)",
+            "ബിരുദാനന്തര ബിരുദം (പിജി)",
+            "മറ്റുള്ളവ"
           ]
         }
       ],
@@ -87,9 +87,9 @@
           "type": "radio",
           "text": "5. Which visual-centric platform do you use the most daily?",
           "options": [
-            "Instagram",
-            "Facebook",
-            "I use both equally"
+            "ഇൻസ്റ്റാഗ്രാം",
+            "ഫേസ്ബുക്ക്",
+            "രണ്ടും ഒരുപോലെ ഉപയോഗിക്കുന്നു"
           ]
         },
         {
@@ -97,10 +97,10 @@
           "type": "radio",
           "text": "6. Approximately how much time do you spend scrolling on these platforms per day?",
           "options": [
-            "Less than 1 hour",
-            "1 to 3 hours",
-            "3 to 5 hours",
-            "More than 5 hours"
+            "1 മണിക്കൂറിൽ താഴെ",
+            "1 മുതൽ 3 മണിക്കൂർ വരെ",
+            "3 മുതൽ 5 മണിക്കൂർ വരെ",
+            "5 മണിക്കൂറിൽ കൂടുതൽ"
           ]
         },
         {
@@ -108,10 +108,10 @@
           "type": "radio",
           "text": "7. What type of content do you PRIMARILY consume while scrolling through your feed?",
           "options": [
-            "Entertainment & Comedy (Memes, funny reels, viral trends)",
-            "News & Current Affairs (Politics, local/global news updates)",
-            "Lifestyle & Personal Connections (Friends' updates, travel, food, fashion)",
-            "Educational & Technology (Tech updates, tutorials, informative content)"
+            "വിനോദം & കോമഡി (മീമുകൾ, ഫണ്ണി റീൽസ്, വൈറൽ ട്രെൻഡുകൾ)",
+            "വാർത്തകൾ & സമകാലിക കാര്യങ്ങൾ (രാഷ്ട്രീയം, പ്രാദേശിക/ആഗോള വാർത്തകൾ)",
+            "ജീവിതശൈലി & വ്യക്തിബന്ധങ്ങൾ (സുഹൃത്തുക്കളുടെ വിശേഷങ്ങൾ, യാത്ര, ഭക്ഷണം, ഫാഷൻ)",
+            "വിദ്യാഭ്യാസം & സാങ്കേതികവിദ്യ (ടെക് അപ്ഡേറ്റുകൾ, ട്യൂട്ടോറിയലുകൾ, വിവരങ്ങൾ)"
           ]
         }
       ],
