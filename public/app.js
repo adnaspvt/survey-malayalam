@@ -595,17 +595,17 @@ function renderSection(index) {
               const scoreVal = parseInt(savedVal);
               const isChecked = scoreVal === score;
               const textMap = {
-                1: 'Strongly.Disagree',
-                2: 'Disagree',
-                3: 'Neutral',
-                4: 'Agree',
-                5: 'Strongly.Agree'
+                1: 'പൂർണ്ണമായും വിയോജിക്കുന്നു',
+                2: 'വിയോജിക്കുന്നു',
+                3: 'നിഷ്പക്ഷം',
+                4: 'യോജിക്കുന്നു',
+                5: 'പൂർണ്ണമായും യോജിക്കുന്നു'
               };
               return `
                 <label class="likert-option ${isChecked ? 'checked-likert' : ''}" onclick="toggleLikertClass(this)">
                   <input type="radio" name="${q.id}" value="${score}" ${isChecked ? 'checked' : ''} onchange="saveAnswer('${q.id}', ${score})">
                   <span class="likert-score">${score}</span>
-                  <span class="likert-text">${textMap[score].split(' ')[0]}</span>
+                  <span class="likert-text">${textMap[score]}</span>
                 </label>
               `;
             }).join('')}
@@ -619,11 +619,11 @@ function renderSection(index) {
               const scoreVal = parseInt(savedVal);
               const isChecked = scoreVal === score;
               const textMap = {
-                1: 'Never',
-                2: 'Rarely',
-                3: 'Sometimes',
-                4: 'Often',
-                5: 'Always'
+                1: 'ഒരിക്കലുമില്ല',
+                2: 'അപൂർവ്വമായി',
+                3: 'ചിലപ്പോൾ',
+                4: 'പലപ്പോഴും',
+                5: 'എല്ലായ്പ്പോഴും'
               };
               return `
                 <label class="likert-option ${isChecked ? 'checked-likert' : ''}" onclick="toggleLikertClass(this)">
