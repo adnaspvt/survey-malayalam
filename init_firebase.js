@@ -1,7 +1,7 @@
 const https = require('https');
 const fs = require('fs');
 
-const FIREBASE_DB_URL = 'https://research-344f8-default-rtdb.asia-southeast1.firebasedatabase.app';
+const FIREBASE_DB_URL = 'https://malayalam-questioneer-default-rtdb.asia-southeast1.firebasedatabase.app';
 const configPath = 'd:/Desktop/RESEARCH/survey/research/survey_config.json';
 const configData = fs.readFileSync(configPath, 'utf8');
 
