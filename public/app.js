@@ -2,175 +2,175 @@
 
 // State Management
 const defaultSurveyConfig = {
-  "consentText": "Hello,\nThis survey is conducted as part of an academic research study. The purpose of this study is to understand how people identify AI-generated images and videos on social media platforms.\n\nYour responses will remain confidential and used only for research purposes.\n\n⏳ Time required: 5–7 minutes",
+  "consentText": "നമസ്കാരം,\nഈ സർവ്വേ ഒരു അക്കാദമിക് ഗവേഷണ പഠനത്തിന്റെ ഭാഗമായാണ് നടത്തുന്നത്. സോഷ്യൽ മീഡിയ പ്ലാറ്റ്‌ഫോമുകളിലെ AI വഴി നിർമ്മിച്ച ചിത്രങ്ങളും വീഡിയോകളും ആളുകൾ എങ്ങനെ തിരിച്ചറിയുന്നു എന്ന് മനസ്സിലാക്കുകയാണ് ഈ പഠനത്തിന്റെ ലക്ഷ്യം.\n\nനിങ്ങളുടെ പ്രതികരണങ്ങൾ പൂർണ്ണമായും രഹസ്യമായി സൂക്ഷിക്കുകയും ഗവേഷണ ആവശ്യങ്ങൾക്ക് മാത്രമായി ഉപയോഗിക്കുകയും ചെയ്യും.\n\n⏳ ആവശ്യമായ സമയം: 5–7 മിനിറ്റ്",
   "aiImageClues": [
-    "Anatomy/Logic Errors: Weird fingers, extra limbs, or melting/merged objects.",
-    "Background/Text Errors: Unreadable or gibberish text, and illogical background elements.",
-    "Texture/Lighting Errors: Unnatural perfect lighting, excessive cinematic gloss, or \"plastic-like\" skin.",
-    "I didn't see any specific technical mistake; I just guessed."
+    "ശരീരഘടന/യുക്തി പിശകുകൾ: വിചിത്രമായ വിരലുകൾ, അധിക കൈകാലുകൾ, അല്ലെങ്കിൽ പരസ്പരം ലയിച്ച വസ്തുക്കൾ.",
+    "പശ്ചാത്തല/ടെക്സ്റ്റ് പിശകുകൾ: വായിക്കാൻ കഴിയാത്ത അക്ഷരങ്ങൾ, യുക്തിരഹിതമായ പശ്ചാത്തല ഘടകങ്ങൾ.",
+    "ടെക്സ്ചർ/ലൈറ്റിംഗ് പിശകുകൾ: അസ്വാഭാവികമായ കൃത്യതയുള്ള വെളിച്ചം, അമിതമായ സിനിമാറ്റിക് തിളക്കം, അല്ലെങ്കിൽ പ്ലാസ്റ്റിക് പോലുള്ള ചർമ്മം.",
+    "പ്രത്യേകമായി ഒരു സാങ്കേതിക പിശകും ഞാൻ കണ്ടില്ല; വെറുതെ ഊഹിച്ചതാണ്."
   ],
   "aiVideoClues": [
-    "Lip-sync Mismatch: The audio does not properly align with the mouth movements.",
-    "Robotic Movements: Unnatural blinking patterns or stiff, robotic facial expressions.",
-    "Flickering/Glitches: Morphing edges around the face or an unstable, flickering background.",
-    "I didn't see any specific technical mistake; I just guessed."
+    "ലിപ്-സിങ്ക് പൊരുത്തക്കേട്: ശബ്ദം വായയുടെ ചലനങ്ങളുമായി ശരിയായി പൊരുത്തപ്പെടുന്നില്ല.",
+    "റോബോട്ടിക് ചലനങ്ങൾ: അസ്വാഭാവികമായി കണ്ണുചിമ്മുന്ന രീതി അല്ലെങ്കിൽ കൃത്രിമമായ മുഖഭാവങ്ങൾ.",
+    "മിന്നൽ/തടസ്സങ്ങൾ: മുഖത്തിന് ചുറ്റുമുള്ള അരികുകൾ മാറുന്നത് അല്ലെങ്കിൽ സ്ഥിരതയില്ലാത്ത പശ്ചാത്തലം.",
+    "പ്രത്യേകമായി ഒരു സാങ്കേതിക പിശകും ഞാൻ കണ്ടില്ല; വെറുതെ ഊഹിച്ചതാണ്."
   ],
   "authenticImageClues": [
-    "Natural Textures: Realistic skin pores, blemishes, and accurate natural shadows/lighting.",
-    "Logical Context: Identifiable real-world backgrounds and perfectly readable text.",
-    "Natural Imperfections: Normal human asymmetry and a lack of overly polished, artificial perfection.",
-    "I didn't notice any specific cues; it just looked completely flawless and real to me."
+    "സ്വാഭാവിക രൂപം: യഥാർത്ഥ ചർമ്മത്തിലെ സുഷിരങ്ങൾ, പാടുകൾ, കൃത്യമായ നിഴലുകൾ/വെളിച്ചം.",
+    "യുക്തിസഹജമായ പശ്ചാത്തലം: തിരിച്ചറിയാൻ കഴിയുന്ന യഥാർത്ഥ പശ്ചാത്തലങ്ങളും വ്യക്തമായി വായിക്കാവുന്ന അക്ഷരങ്ങളും.",
+    "സ്വാഭാവികമായ അപൂർണ്ണതകൾ: സാധാരണ മനുഷ്യരിലുള്ള അസമത്വവും, അമിതമായ കൃത്രിമ തിളക്കത്തിന്റെ അഭാവവും.",
+    "പ്രത്യേകമായി ഒന്നും ഞാൻ ശ്രദ്ധിച്ചില്ല; അത് തികച്ചും യഥാർത്ഥമായി എനിക്ക് തോന്നി."
   ],
   "authenticVideoClues": [
-    "Natural Human Movements: Fluid body language and realistic, spontaneous facial expressions.",
-    "Perfect Audio-Visual Sync: The voice perfectly matches the natural movement of the lips.",
-    "Consistent Environment: A highly stable background with no morphing, blurring, or glitches during movement.",
-    "I didn't notice any specific cues; it just looked completely flawless and real to me."
+    "സ്വാഭാവിക മനുഷ്യ ചലനങ്ങൾ: സ്വാഭാവികമായ ശരീരഭാഷയും യാഥാർത്ഥ്യബോധമുള്ള മുഖഭാവങ്ങളും.",
+    "ശബ്ദ-ചിത്ര പൊരുത്തം: ചുണ്ടുകളുടെ സ്വാഭാവിക ചലനത്തിന് അനുസരിച്ച് ശബ്ദം കൃത്യമായി പൊരുത്തപ്പെടുന്നു.",
+    "സ്ഥിരതയുള്ള പശ്ചാത്തലം: ചലിക്കുമ്പോൾ മങ്ങലോ തടസ്സങ്ങളോ ഇല്ലാത്ത തികച്ചും സുസ്ഥിരമായ പശ്ചാത്തലം.",
+    "പ്രത്യേകമായി ഒന്നും ഞാൻ ശ്രദ്ധിച്ചില്ല; അത് തികച്ചും യഥാർത്ഥമായി എനിക്ക് തോന്നി."
   ],
-  "description": "Academic Research Survey",
+  "description": "അക്കാദമിക് ഗവേഷണ സർവ്വേ",
   "sections": [
     {
-      "description": "Objective: To define the demographic boundaries",
+      "description": "ലക്ഷ്യം: ജനസംഖ്യാപരമായ അതിരുകൾ നിർവചിക്കുക",
       "id": "section_1",
       "questions": [
         {
           "id": "q1",
           "type": "radio",
-          "text": "1. What is your age?",
+          "text": "1. നിങ്ങളുടെ പ്രായം എത്രയാണ്?",
           "options": [
             "18 - 25",
             "26 - 35",
             "36 - 50",
-            "Above 50"
+            "50-ന് മുകളിൽ"
           ]
         },
         {
           "id": "q2",
           "type": "radio",
-          "text": "2. What is your gender?",
+          "text": "2. നിങ്ങളുടെ ലിംഗം ഏതാണ്?",
           "options": [
-            "Male",
-            "Female"
+            "പുരുഷൻ",
+            "സ്ത്രീ"
           ]
         },
         {
           "id": "q3",
           "type": "dropdown",
-          "text": "3. Which district in the Malabar region do you currently reside in?",
+          "text": "3. മലബാർ മേഖലയിലെ ഏത് ജില്ലയിലാണ് നിങ്ങൾ നിലവിൽ താമസിക്കുന്നത്?",
           "options": [
-            "Kozhikode",
-            "Malappuram",
-            "Kannur",
-            "Wayanad",
-            "Palakkad",
-            "Kasaragod"
+            "കോഴിക്കോട്",
+            "മലപ്പുറം",
+            "കണ്ണൂർ",
+            "വയനാട്",
+            "പാലക്കാട്",
+            "കാസർഗോഡ്"
           ]
         },
         {
           "id": "q4",
           "type": "radio",
-          "text": "4. What is your highest educational qualification?",
+          "text": "4. നിങ്ങളുടെ ഉയർന്ന വിദ്യാഭ്യാസ യോഗ്യത എന്താണ്?",
           "options": [
-            "High School / Plus Two",
-            "Undergraduate (Degree)",
-            "Postgraduate (PG)",
-            "Professional Degree / Diploma"
+            "ഹൈസ്കൂൾ / പ്ലസ് ടൂ",
+            "ബിരുദം (ഡിഗ്രി)",
+            "ബിരുദാനന്തര ബിരുദം (പിജി)",
+            "പ്രൊഫഷണൽ ബിരുദം / ഡിപ്ലോമ"
           ]
         }
       ],
-      "title": "SECTION 1: Socio-Demographic Profile"
+      "title": "വിഭാഗം 1: സാമൂഹിക-ജനസംഖ്യാ വിവരങ്ങൾ"
     },
     {
-      "description": "Objective: To measure platform usage and exposure to fast-paced content",
+      "description": "ലക്ഷ്യം: പ്ലാറ്റ്‌ഫോം ഉപയോഗവും ദ്രുതഗതിയിലുള്ള ഉള്ളടക്കത്തോടുള്ള സമ്പർക്കവും അളക്കുക",
       "id": "section_2",
       "questions": [
         {
           "id": "q5",
           "type": "radio",
-          "text": "5. Which visual-centric platform do you use the most daily?",
+          "text": "5. നിങ്ങൾ ദിവസവും ഏറ്റവും കൂടുതൽ ഉപയോഗിക്കുന്ന പ്ലാറ്റ്‌ഫോം ഏതാണ്?",
           "options": [
-            "Instagram",
-            "Facebook",
-            "I use both equally"
+            "ഇൻസ്റ്റാഗ്രാം",
+            "ഫേസ്ബുക്ക്",
+            "ഞാൻ രണ്ടും ഒരുപോലെ ഉപയോഗിക്കുന്നു"
           ]
         },
         {
           "id": "q6",
           "type": "radio",
-          "text": "6. Approximately how much time do you spend scrolling on these platforms per day?",
+          "text": "6. പ്രതിദിനം ഏകദേശം എത്ര സമയം നിങ്ങൾ ഇത്തരം പ്ലാറ്റ്‌ഫോമുകളിൽ ചെലവഴിക്കുന്നു?",
           "options": [
-            "Less than 1 hour",
-            "1 to 3 hours",
-            "3 to 5 hours",
-            "More than 5 hours"
+            "1 മണിക്കൂറിൽ താഴെ",
+            "1 മുതൽ 3 മണിക്കൂർ വരെ",
+            "3 മുതൽ 5 മണിക്കൂർ വരെ",
+            "5 മണിക്കൂറിൽ കൂടുതൽ"
           ]
         },
         {
           "id": "q7",
           "type": "radio",
-          "text": "7. What type of content do you PRIMARILY consume while scrolling through your feed?",
+          "text": "7. സോഷ്യൽ മീഡിയയിൽ നിങ്ങൾ പ്രധാനമായും കാണാൻ താല്പര്യപ്പെടുന്ന ഉള്ളടക്കം ഏതാണ്?",
           "options": [
-            "Entertainment & Comedy (Memes, funny reels, viral trends)",
-            "News & Current Affairs (Politics, local/global news updates)",
-            "Lifestyle & Personal Connections (Friends' updates, travel, food, fashion)",
-            "Educational & Technology (Tech updates, tutorials, informative content)"
+            "വിനോദം & കോമഡി (മീമുകൾ, തമാശ റീലുകൾ, വൈറൽ ട്രെൻഡുകൾ)",
+            "വാർത്തകൾ & സമകാലിക കാര്യങ്ങൾ (രാഷ്ട്രീയം, പ്രാദേശിക/ആഗോള വാർത്തകൾ)",
+            "ജീവിതശൈലി & വ്യക്തിഗത കാര്യങ്ങൾ (സുഹൃത്തുക്കളുടെ അപ്‌ഡേറ്റുകൾ, യാത്ര, ഭക്ഷണം, ഫാഷൻ)",
+            "വിദ്യാഭ്യാസം & സാങ്കേതികവിദ്യ (ടെക് അപ്‌ഡേറ്റുകൾ, ട്യൂട്ടോറിയലുകൾ, വിവരങ്ങൾ)"
           ]
         }
       ],
-      "title": "SECTION 2: Social Media & Algorithmic Feed Behavior"
+      "title": "വിഭാഗം 2: സോഷ്യൽ മീഡിയ ഉപയോഗം"
     },
     {
-      "description": "Objective: To measure how quickly the user adopts new Generative AI tools. Will be calculated as 'Technology Adoption Score' in SPSSPlease indicate your level of agreement with the following statements:(Scale: 1 = Strongly Disagree, 2 = Disagree, 3 = Neutral, 4 = Agree, 5 = Strongly Agree)",
+      "description": "ലക്ഷ്യം: പുതിയ ജനറേറ്റീവ് AI ടൂളുകൾ ഉപയോക്താവ് എത്ര വേഗത്തിൽ ഉപയോഗിക്കാൻ തുടങ്ങുന്നു എന്ന് അളക്കുക. താഴെ പറയുന്ന പ്രസ്താവനകളോടുള്ള നിങ്ങളുടെ യോജിപ്പ് സൂചിപ്പിക്കുക:\n(സ്കെയിൽ: 1 = പൂർണ്ണമായും വിയോജിക്കുന്നു, 2 = വിയോജിക്കുന്നു, 3 = നിഷ്പക്ഷം, 4 = യോജിക്കുന്നു, 5 = പൂർണ്ണമായും യോജിക്കുന്നു)",
       "id": "section_3",
       "questions": [
         {
           "id": "q8",
           "type": "likert5",
-          "text": "8. I actively experiment with new Generative AI tools (like ChatGPT, Midjourney, AI filters) as soon as they become available."
+          "text": "8. പുതിയ ജനറേറ്റീവ് AI ടൂളുകൾ (ChatGPT, Midjourney, AI ഫിൽട്ടറുകൾ പോലുള്ളവ) ലഭ്യമാകുമ്പോൾ തന്നെ ഞാൻ അവ പരീക്ഷിക്കാറുണ്ട്."
         },
         {
           "id": "q9",
           "type": "likert5",
-          "text": "9. I feel very comfortable interacting with, liking, or sharing content on social media even if I know it is generated by AI."
+          "text": "9. AI വഴി നിർമ്മിച്ചതാണെന്ന് അറിഞ്ഞാൽ കൂടി, സോഷ്യൽ മീഡിയയിലെ ആ ഉള്ളടക്കം ലൈക്ക് ചെയ്യാനോ ഷെയർ ചെയ്യാനോ എനിക്ക് യാതൊരു ബുദ്ധിമുട്ടും തോന്നാറില്ല."
         },
         {
           "id": "q10",
           "type": "likert5",
-          "text": "10. I am highly confident in my personal ability to easily distinguish between a real photograph and a hyper-realistic AI image. (Measures Overconfidence Bias)"
+          "text": "10. ഒരു യഥാർത്ഥ ഫോട്ടോയും വളരെ യഥാർത്ഥ്യമെന്ന് തോന്നുന്ന ഒരു AI ചിത്രവും തമ്മിലുള്ള വ്യത്യാസം എളുപ്പത്തിൽ കണ്ടെത്താനുള്ള എന്റെ കഴിവ് എനിക്ക് നല്ല ആത്മവിശ്വാസമുണ്ട്."
         }
       ],
-      "title": "SECTION 3: Technology Adoption (Diffusion of Innovations Scale)"
+      "title": "വിഭാഗം 3: സാങ്കേതികവിദ്യാ ഉപയോഗം"
     },
     {
-      "description": "Objective: To measure the actual fact-checking habits. Will be calculated as 'Media Literacy Score' in SPSSPlease rate how often you engage in the following behaviors while using social media:(Scale: 1 = Never, 2 = Rarely, 3 = Sometimes, 4 = Often, 5 = Always)",
+      "description": "ലക്ഷ്യം: യഥാർത്ഥ വസ്തുതാ അന്വേഷണ ശീലങ്ങൾ അളക്കുക. സോഷ്യൽ മീഡിയ ഉപയോഗിക്കുമ്പോൾ താഴെ പറയുന്ന കാര്യങ്ങൾ നിങ്ങൾ എത്ര തവണ ചെയ്യാറുണ്ട് എന്ന് രേഖപ്പെടുത്തുക:\n(സ്കെയിൽ: 1 = ഒരിക്കലുമില്ല, 2 = അപൂർവ്വമായി, 3 = ചിലപ്പോൾ, 4 = പലപ്പോഴും, 5 = എല്ലായ്പ്പോഴും)",
       "id": "section_4",
       "questions": [
         {
           "id": "q11",
           "type": "likert5Freq",
-          "text": "11. I usually double-check the source or search for more information before sharing a news article or an image that evokes strong emotions."
+          "text": "11. ശക്തമായ വികാരങ്ങൾ ഉണർത്തുന്ന ഒരു വാർത്തയോ ചിത്രമോ ഷെയർ ചെയ്യുന്നതിന് മുൻപ്, ഞാൻ സാധാരണയായി അതിന്റെ ഉറവിടം പരിശോധിക്കുകയോ കൂടുതൽ വിവരങ്ങൾ അന്വേഷിക്കുകയോ ചെയ്യാറുണ്ട്."
         },
         {
           "id": "q12",
           "type": "likert5Freq",
-          "text": "12. I often notice and analyze visual inconsistencies (e.g., weird lighting, unnatural skin textures, impossible background details) in the images I see online."
+          "text": "12. ഓൺലൈനിൽ കാണുന്ന ചിത്രങ്ങളിലെ പൊരുത്തക്കേടുകൾ (ഉദാ: അസ്വാഭാവികമായ വെളിച്ചം, ചർമ്മം, യുക്തിരഹിതമായ പശ്ചാത്തലം) ഞാൻ പലപ്പോഴും ശ്രദ്ധിക്കുകയും അവലോകനം ചെയ്യുകയും ചെയ്യാറുണ്ട്."
         },
         {
           "id": "q13",
           "type": "likert5Freq",
-          "text": "13. Before believing a viral visual, I actively check the profile or page that posted it to see if they are a trustworthy source."
+          "text": "13. ഒരു വൈറൽ ചിത്രമോ വീഡിയോയോ വിശ്വസിക്കുന്നതിന് മുൻപ്, അത് പോസ്റ്റ് ചെയ്ത പ്രൊഫൈലോ പേജോ വിശ്വസനീയമാണോ എന്ന് ഞാൻ പരിശോധിക്കാറുണ്ട്."
         }
       ],
-      "title": "SECTION 4: Practical Digital Media Literacy (Content Literacy Scale)"
+      "title": "വിഭാഗം 4: ഡിജിറ്റൽ മീഡിയ സാക്ഷരത"
     },
     {
-      "description": "Objective: To test practical accuracy and identify the cues used. Keep this short with just 8 media items to avoid survey fatigue.\nInstructions: Please look closely at the 8 media items below and answer the two questions for each.",
+      "description": "ലക്ഷ്യം: പ്രായോഗിക കൃത്യത പരിശോധിക്കുക. നിർദ്ദേശങ്ങൾ: ദയവായി താഴെയുള്ള 8 ചിത്രങ്ങൾ/വീഡിയോകൾ സൂക്ഷ്മമായി പരിശോധിച്ച ശേഷം ഓരോന്നിനും താഴെയുള്ള രണ്ട് ചോദ്യങ്ങൾക്ക് ഉത്തരം നൽകുക.",
       "id": "section_5",
       "isMediaSection": true,
       "mediaItems": [
         {
           "anomalies": "Symmetry errors in the backpack straps, surreal light source reflecting on the helmet visor showing trees, physics-defying lavender stems.",
-          "description": "Photorealistic depiction of an astronaut picking purple lavender under a bright orange Martian sky.",
+          "description": "തിളങ്ങുന്ന ഓറഞ്ച് ചൊവ്വാ ഗ്രഹത്തിന് സമാനമായ ആകാശത്തിന് കീഴിൽ ഒരു ബഹിരാകാശ സഞ്ചാരി പർപ്പിൾ ലാവെൻഡർ പറിക്കുന്നതിൻ്റെ ചിത്രം.",
           "id": "m1",
           "title": "1",
           "trueType": "ai",
@@ -179,7 +179,7 @@ const defaultSurveyConfig = {
         },
         {
           "anomalies": "No AI anomalies. Perfect reflections on wet floor, clear and legible price tags in Japanese kanji, anatomically correct hands holding ice scoop.",
-          "description": "Stunning street photography of a vendor smiling behind his seafood stall at Tsukiji Market, Tokyo.",
+          "description": "ടോക്കിയോയിലെ സുക്കിജി മാർക്കറ്റിലെ ഒരു സീഫുഡ് സ്റ്റാളിന് പിന്നിൽ നിന്ന് പുഞ്ചിരിക്കുന്ന കച്ചവടക്കാരന്റെ ഒരു മികച്ച സ്ട്രീറ്റ് ഫോട്ടോഗ്രാഫി.",
           "id": "m2",
           "title": "2",
           "trueType": "real",
@@ -188,7 +188,7 @@ const defaultSurveyConfig = {
         },
         {
           "anomalies": "Surreal biological fusion, blending textures between turtle shell and fertile soil, impossible lighting patterns deep underwater.",
-          "description": "A giant sea turtle swimming in deep blue ocean waters with an entire tropical forest growing on its shell.",
+          "description": "ആഴത്തിലുള്ള നീലക്കടലിൽ നീന്തുന്ന ഭീമാകാരനായ കടലാമ, അതിൻ്റെ പുറംതോടിൽ ഒരു വലിയ വനം വളർന്നു നിൽക്കുന്നു.",
           "id": "m3",
           "title": "3",
           "trueType": "ai",
@@ -197,7 +197,7 @@ const defaultSurveyConfig = {
         },
         {
           "anomalies": "No AI anomalies. Flawless human anatomy, realistic physics-based liquid viscosity, consistent focus plane, authentic light refraction through honey.",
-          "description": "High-contrast close-up shot of liquid honey dripping between fingers, capturing natural skin pores and hair.",
+          "description": "വിരലുകൾക്കിടയിലൂടെ ഇറ്റിറ്റുവീഴുന്ന തേനിൻ്റെ ക്ലോസ്-അപ്പ് ഷോട്ട്.",
           "id": "m4",
           "title": "4",
           "trueType": "real",
@@ -206,7 +206,7 @@ const defaultSurveyConfig = {
         },
         {
           "anomalies": "No anomalies. Clear depth of field and realistic shadows.",
-          "description": "A bustling city street with neon lights reflecting on a wet pavement.",
+          "description": "നിയോൺ ലൈറ്റുകൾ നനഞ്ഞ നടപ്പാതയിൽ പ്രതിഫലിക്കുന്ന തിരക്കേറിയ നഗരവീഥി.",
           "id": "m5",
           "title": "5",
           "trueType": "real",
@@ -215,7 +215,7 @@ const defaultSurveyConfig = {
         },
         {
           "anomalies": "Unnatural lighting and overly smooth textures. Text in the background is unreadable gibberish.",
-          "description": "Futuristic cyberpunk character standing in an alleyway.",
+          "description": "ഒരു ഇടവഴിയിൽ നിൽക്കുന്ന ഭാവിയിലെ സൈബർപങ്ക് കഥാപാത്രം.",
           "id": "m6",
           "title": "6",
           "trueType": "ai",
@@ -224,7 +224,7 @@ const defaultSurveyConfig = {
         },
         {
           "anomalies": "Slight anatomical inconsistencies in background characters and unnatural depth separation.",
-          "description": "Aerial view of a fantastical castle built into the side of a massive waterfall.",
+          "description": "വലിയൊരു വെള്ളച്ചാട്ടത്തിൻ്റെ വശത്തായി നിർമ്മിച്ചിരിക്കുന്ന ഒരു സാങ്കൽപ്പിക കോട്ടയുടെ മുകളിൽ നിന്നുള്ള കാഴ്ച.",
           "id": "m7",
           "title": "7",
           "trueType": "ai",
@@ -233,7 +233,7 @@ const defaultSurveyConfig = {
         },
         {
           "anomalies": "No anomalies. Natural lighting and true-to-life textures.",
-          "description": "Close-up of a person's hands holding a warm cup of coffee.",
+          "description": "ഒരു വ്യക്തിയുടെ കൈകളിൽ ഒരു കപ്പ് ചൂടുള്ള കാപ്പി പിടിച്ചിരിക്കുന്ന ക്ലോസ്-അപ്പ് ദൃശ്യം.",
           "id": "m8",
           "title": "8",
           "trueType": "real",
@@ -241,10 +241,10 @@ const defaultSurveyConfig = {
           "url": "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&q=80&w=800"
         }
       ],
-      "title": "SECTION 5: Practical Visual Test (Simulacra Detection)"
+      "title": "വിഭാഗം 5: പ്രായോഗിക പരിശോധന (ചിത്രങ്ങളും വീഡിയോകളും തിരിച്ചറിയൽ)"
     }
   ],
-  "title": "Digital Media Literacy and AI Detection Survey"
+  "title": "ഡിജിറ്റൽ മീഡിയ സാക്ഷരതാ - നിർമ്മിത ബുദ്ധി (AI) ഉപയോഗിച്ചുള്ള ഉള്ളടക്കം തിരിച്ചറിയൽ സർവ്വേ"
 };
 
 // Base API configuration and hybrid routing
@@ -323,7 +323,7 @@ window.handleImageError = function(imgEl, title, url) {
         </div>
         <div style="display: flex; flex-direction: column; gap: 4px;">
           <span style="font-weight: 700; font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-primary);">${title}</span>
-          <span style="color: var(--warning); font-size: 0.8rem; margin-bottom: 4px;">Direct image preview unavailable. Click below to view:</span>
+          <span style="color: var(--warning); font-size: 0.8rem; margin-bottom: 4px;">ഇമേജ് പ്രിവ്യൂ ലഭ്യമല്ല. കാണുന്നതിനായി താഴെ ക്ലിക്ക് ചെയ്യുക:</span>
           <a href="${url}" target="_blank" style="color: var(--primary); font-size: 0.9rem; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
             Open Resource Link <i class="fa-solid fa-up-right-from-square" style="font-size: 0.75rem;"></i>
           </a>
@@ -363,7 +363,7 @@ async function loadSurveyConfig() {
   document.getElementById('survey-title-main').innerHTML = linkify(surveyConfig.title);
   document.getElementById('survey-subtitle-main').innerHTML = linkify(surveyConfig.description);
   document.getElementById('consent-body-text').innerHTML = linkify(surveyConfig.consentText);
-  document.getElementById('survey-end-note-text').innerHTML = linkify(surveyConfig.endNote || "Thank you for participating in this study. Your response is valuable for understanding public awareness and detection of AI-generated media.");
+  document.getElementById('survey-end-note-text').innerHTML = linkify(surveyConfig.endNote || "ഈ പഠനത്തിൽ പങ്കെടുത്തതിന് നന്ദി. AI നിർമ്മിത മീഡിയയെക്കുറിച്ചുള്ള പൊതുജനങ്ങളുടെ അവബോധം മനസ്സിലാക്കാൻ നിങ്ങളുടെ പ്രതികരണം വിലപ്പെട്ടതാണ്.");
 }
 
 // Handle Consent Page
@@ -372,12 +372,12 @@ btnConsentNext.addEventListener('click', () => {
   const nameInput = document.getElementById('participant-name-input');
   
   if (!nameInput || !nameInput.value.trim()) {
-    showToast('Please enter your Name or Anonymous Code identifier to proceed.', 'danger');
+    showToast('തുടരുന്നതിനായി ദയവായി നിങ്ങളുടെ പേരോ ഐഡൻ്റിഫയറോ നൽകുക.', 'danger');
     return;
   }
   
   if (!selectedConsent) {
-    showToast('Please specify whether you agree to participate in order to proceed.', 'danger');
+    showToast('തുടരുന്നതിനായി ഇതിൽ പങ്കെടുക്കാൻ സമ്മതമാണോ എന്ന് വ്യക്തമാക്കുക.', 'danger');
     return;
   }
   
@@ -408,7 +408,7 @@ function renderSection(index) {
   
   // Build Section HTML Card
   const hasColon = section.title.includes(':');
-  const tagText = hasColon ? section.title.split(':')[0].trim() : 'SURVEY SECTION';
+  const tagText = hasColon ? section.title.split(':')[0].trim() : 'സർവ്വേ വിഭാഗം';
   const titleText = hasColon ? section.title.split(':').slice(1).join(':').trim() : section.title;
   
   let html = `
@@ -488,7 +488,7 @@ function renderSection(index) {
           <div class="media-container">
             <img src="${processedUrl}" loading="lazy" alt="${item.title}" id="img-asset-${item.id}" onerror="handleImageError(this, '${item.title.replace(/'/g, "\\'")}', '${processedUrl.replace(/'/g, "\\'")}')">
             <button class="zoom-overlay-btn" onclick="openZoomModal('${processedUrl}', '${item.title.replace(/'/g, "\\'")}')">
-              <i class="fa-solid fa-expand"></i> Fullscreen Toggle
+              <i class="fa-solid fa-expand"></i> ഫുൾ സ്ക്രീൻ
             </button>
           </div>
         `;
@@ -497,7 +497,7 @@ function renderSection(index) {
       html += `
         <div class="media-question-block" id="media-block-${item.id}" style="margin-bottom: 50px; padding-bottom: 40px; border-bottom: 1px dashed var(--border-color); transition: all 0.5s ease;">
           <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; margin-bottom: 15px; color: var(--primary);">
-            Media Test Item #${itemIdx + 1}: ${item.title}
+            മീഡിയ ടെസ്റ്റ് #${itemIdx + 1}: ${item.title}
           </h3>
           
           ${mediaHtml}
@@ -506,18 +506,18 @@ function renderSection(index) {
           <!-- Q13: Classification -->
           <div class="form-group">
             <label class="question-text">
-              <span class="question-num"></span> 13. Do you think this media is:
+              <span class="question-num"></span> 13. ഈ ചിത്രം/വീഡിയോ എന്താണെന്നാണ് നിങ്ങൾ കരുതുന്നത്:
             </label>
             <div class="options-list">
               <label class="option-item ${savedVal === 'Authentic' ? 'checked-item' : ''}" onclick="toggleOptionClass(this)">
                 <input type="radio" name="${item.id}" value="Authentic" ${savedVal === 'Authentic' ? 'checked' : ''} onchange="handleMediaClassificationChange('${item.id}', 'Authentic')">
                 <div class="custom-indicator"></div>
-                <span class="option-label">Authentic (A real photograph/video captured by a camera)</span>
+                <span class="option-label">യഥാർത്ഥം (ക്യാമറയിൽ പകർത്തിയ യഥാർത്ഥ ചിത്രം/വീഡിയോ)</span>
               </label>
               <label class="option-item ${savedVal === 'AI-Generated' ? 'checked-item' : ''}" onclick="toggleOptionClass(this)">
                 <input type="radio" name="${item.id}" value="AI-Generated" ${savedVal === 'AI-Generated' ? 'checked' : ''} onchange="handleMediaClassificationChange('${item.id}', 'AI-Generated')">
                 <div class="custom-indicator"></div>
-                <span class="option-label">AI-Generated (Created using Artificial Intelligence)</span>
+                <span class="option-label">AI ഉപയോഗിച്ച് നിർമ്മിച്ചത് (നിർമ്മിത ബുദ്ധി വഴി നിർമ്മിച്ചത്)</span>
               </label>
             </div>
           </div>
@@ -525,7 +525,7 @@ function renderSection(index) {
           <!-- Q14: Clue (Conditional) -->
           <div class="form-group conditional-clue-group" id="clue-group-${item.id}" style="${savedVal ? 'display: block;' : 'display: none;'} margin-top: 25px;">
             <label class="question-text">
-              <span class="question-num"></span> 14. Based on your selection, what was the PRIMARY visual clue you relied on?
+              <span class="question-num"></span> 14. നിങ്ങളുടെ തിരഞ്ഞെടുപ്പിന്റെ അടിസ്ഥാനത്തിൽ, നിങ്ങൾ പ്രധാനമായും ശ്രദ്ധിച്ച സൂചന എന്താണ്?
             </label>
             <div class="options-list" id="clue-options-${item.id}" style="flex-direction: column; gap: 8px;">
               <!-- Options populated by JS -->
@@ -567,7 +567,7 @@ function renderSection(index) {
         html += `
           <div style="margin-top: 15px;">
             <select name="${q.id}" class="form-input" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-color); background: rgba(0,0,0,0.2); color: var(--text-primary); font-size: 1rem; cursor: pointer;" onchange="saveAnswer('${q.id}', this.value)">
-              <option value="" disabled ${!savedVal ? 'selected' : ''}>-- Select an option --</option>
+              <option value="" disabled ${!savedVal ? 'selected' : ''}>-- ഒരു ഓപ്ഷൻ തിരഞ്ഞെടുക്കുക --</option>
               ${q.options.map(opt => `<option value="${opt}" ${savedVal === opt ? 'selected' : ''}>${opt}</option>`).join('')}
             </select>
           </div>
@@ -638,7 +638,7 @@ function renderSection(index) {
       }
       else if (q.type === 'textarea') {
         html += `
-          <textarea class="text-input" placeholder="${q.placeholder || 'Write response...'}" oninput="saveAnswer('${q.id}', this.value)">${savedVal}</textarea>
+          <textarea class="text-input" placeholder="${q.placeholder || 'ഉത്തരം എഴുതുക...'}" oninput="saveAnswer('${q.id}', this.value)">${savedVal}</textarea>
         `;
       }
       
@@ -657,10 +657,10 @@ function renderSection(index) {
   btnPrev.style.visibility = index === 0 ? 'hidden' : 'visible';
   
   if (index === totalSectionsCount - 1) {
-    btnNext.innerHTML = 'Submit Survey <i class="fa-solid fa-paper-plane"></i>';
+    btnNext.innerHTML = 'സർവ്വേ സമർപ്പിക്കുക <i class="fa-solid fa-paper-plane"></i>';
     btnNext.className = 'btn btn-success';
   } else {
-    btnNext.innerHTML = 'Next Section <i class="fa-solid fa-arrow-right"></i>';
+    btnNext.innerHTML = 'അടുത്ത വിഭാഗം <i class="fa-solid fa-arrow-right"></i>';
     btnNext.className = 'btn btn-primary';
   }
   
@@ -746,7 +746,7 @@ btnPrev.addEventListener('click', () => {
 // Navigate Next & Validate Section
 btnNext.addEventListener('click', () => {
   if (!validateCurrentSection()) {
-    showToast('Please answer all questions in this section before continuing.', 'danger');
+    showToast('തുടരുന്നതിന് മുൻപായി ദയവായി ഈ വിഭാഗത്തിലെ എല്ലാ ചോദ്യങ്ങൾക്കും ഉത്തരം നൽകുക.', 'danger');
     return;
   }
   
@@ -851,8 +851,8 @@ async function submitSurvey() {
   placeholderCard.innerHTML = `
     <div class="card text-center" style="padding: 60px 40px;">
       <div class="loading-spinner"></div>
-      <h2 style="font-family: var(--font-heading); margin-top: 20px;">Submitting Questionnaire</h2>
-      <p style="color: var(--text-secondary); margin-top: 10px;">Please wait while we secure your responses in the database...</p>
+      <h2 style="font-family: var(--font-heading); margin-top: 20px;">ചോദ്യാവലി സമർപ്പിക്കുന്നു</h2>
+      <p style="color: var(--text-secondary); margin-top: 10px;">നിങ്ങളുടെ വിവരങ്ങൾ ഡാറ്റാബേസിൽ സേവ് ചെയ്യുന്നത് വരെ ദയവായി കാത്തിരിക്കുക...</p>
     </div>
   `;
   btnPrev.style.display = 'none';
@@ -888,7 +888,7 @@ async function submitSurvey() {
     
     if (!response.ok) throw new Error('Submission server error');
     
-    showToast('Survey responses submitted successfully!', 'success');
+    showToast('സർവ്വേ പ്രതികരണങ്ങൾ വിജയകരമായി സമർപ്പിച്ചു!', 'success');
     
     // Redirect to End screen
     setTimeout(() => {
@@ -899,7 +899,7 @@ async function submitSurvey() {
     
   } catch (err) {
     console.error(err);
-    showToast('Failed to connect to the server. Please try submitting again.', 'danger');
+    showToast('സെർവറുമായി ബന്ധിപ്പിക്കുന്നതിൽ പരാജയപ്പെട്ടു. ദയവായി വീണ്ടും ശ്രമിക്കുക.', 'danger');
     
     // Re-enable navigation
     btnPrev.style.display = 'block';

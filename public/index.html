@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ml">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="theme-color" content="#f8fafc">
-  <title>Academic Survey: AI-Generated Content Detection on Social Media</title>
+  <title>അക്കാദമിക് സർവ്വേ: സോഷ്യൽ മീഡിയയിലെ നിർമ്മിത ബുദ്ധി (AI) ഉപയോഗിച്ചുള്ള ഉള്ളടക്കം തിരിച്ചറിയൽ</title>
 
   <!-- Fonts & Icons CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -19,7 +19,7 @@
   <nav class="nav-header">
     <div class="nav-brand">
       <i class="fa-solid fa-graduation-cap"></i>
-      RESEARCH STUDY <span>Survey</span>
+      ഗവേഷണ പഠനം <span>സർവ്വേ</span>
     </div>
   </nav>
 
@@ -34,57 +34,54 @@
     <section id="screen-consent" class="survey-screen">
       <div class="card">
         <div class="card-header">
-          <span class="section-tag">Academic Research</span>
-          <h1 class="card-title" id="survey-title-main">Detection of AI-Generated Images and Videos on Social Media</h1>
+          <span class="section-tag">അക്കാദമിക് റിസർച്ച്</span>
+          <h1 class="card-title" id="survey-title-main">സോഷ്യൽ മീഡിയയിലെ AI നിർമ്മിത ചിത്രങ്ങളും വീഡിയോകളും കണ്ടെത്തൽ</h1>
           <p class="card-description" id="survey-subtitle-main"></p>
         </div>
         <hr style="border: 0; border-top: 1px solid var(--border-color); margin-bottom: 30px;">
         <div class="form-group" style="margin-bottom: 40px;">
           <h3 style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700; margin-bottom: 15px;">
             <i class="fa-solid fa-file-signature" style="color: var(--primary); margin-right: 8px;"></i>
-            Participant Informed Consent
+            പങ്കെടുക്കുന്നവരുടെ സമ്മതപത്രം
           </h3>
           <p style="white-space: pre-line; line-height: 1.8; color: var(--text-secondary);" id="consent-body-text">
-            Hello,
-            This survey is conducted as part of an academic research study . The
-            purpose of this study is to understand how people identify AI-generated images and videos on social media
-            platforms.
+            നമസ്കാരം,
+            ഈ സർവ്വേ ഒരു അക്കാദമിക് ഗവേഷണ പഠനത്തിന്റെ ഭാഗമായാണ് നടത്തുന്നത്. സോഷ്യൽ മീഡിയ പ്ലാറ്റ്‌ഫോമുകളിലെ AI വഴി നിർമ്മിച്ച ചിത്രങ്ങളും വീഡിയോകളും ആളുകൾ എങ്ങനെ തിരിച്ചറിയുന്നു എന്ന് മനസ്സിലാക്കുകയാണ് ഈ പഠനത്തിന്റെ ലക്ഷ്യം.
 
-            Your responses will remain confidential and used only for research purposes.
+            നിങ്ങളുടെ പ്രതികരണങ്ങൾ പൂർണ്ണമായും രഹസ്യമായി സൂക്ഷിക്കുകയും ഗവേഷണ ആവശ്യങ്ങൾക്ക് മാത്രമായി ഉപയോഗിക്കുകയും ചെയ്യും.
 
-            ⏳ Time required: 5–7 minutes
+            ⏳ ആവശ്യമായ സമയം: 5–7 മിനിറ്റ്
           </p>
         </div>
 
         <div class="form-group" style="margin-bottom: 30px;">
           <label class="question-text" style="margin-bottom: 10px;">
-            <span class="question-num"><i class="fa-solid fa-user"></i></span> Participant's Full Name
+            <span class="question-num"><i class="fa-solid fa-user"></i></span> പങ്കെടുക്കുന്ന ആളുടെ പൂർണ്ണമായ പേര്
           </label>
-          <input type="text" class="text-input" id="participant-name-input" placeholder="Type your name..."
+          <input type="text" class="text-input" id="participant-name-input" placeholder="നിങ്ങളുടെ പേര് നൽകുക..."
             style="width: 100%; max-width: 100%; height: 50px;">
         </div>
 
         <div class="form-group">
           <label class="question-text">
-            <span class="question-num"><i class="fa-regular fa-circle-question"></i></span> Do you agree to participate?
+            <span class="question-num"><i class="fa-regular fa-circle-question"></i></span> ഇതിൽ പങ്കെടുക്കാൻ നിങ്ങൾക്ക് സമ്മതമാണോ?
           </label>
           <div class="options-list">
             <label class="option-item" for="consent-yes" onclick="toggleOptionClass(this)">
               <input type="radio" id="consent-yes" name="consent-agreement" value="yes">
               <div class="custom-indicator"></div>
-              <span class="option-label">Yes, I agree to participate and understand my responses are
-                confidential.</span>
+              <span class="option-label">അതെ, ഇതിൽ പങ്കെടുക്കാൻ സമ്മതമാണ്, വിവരങ്ങൾ രഹസ്യമായിരിക്കുമെന്ന് ഞാൻ മനസ്സിലാക്കുന്നു.</span>
             </label>
             <label class="option-item" for="consent-no" onclick="toggleOptionClass(this)">
               <input type="radio" id="consent-no" name="consent-agreement" value="no">
               <div class="custom-indicator"></div>
-              <span class="option-label">No, I do not wish to participate.</span>
+              <span class="option-label">ഇല്ല, എനിക്ക് ഇതിൽ പങ്കെടുക്കാൻ താല്പര്യമില്ല.</span>
             </label>
           </div>
         </div>
         <div class="survey-nav-actions" style="justify-content: flex-end;">
           <button class="btn btn-primary" id="btn-consent-next">
-            Continue <i class="fa-solid fa-arrow-right"></i>
+            തുടരുക <i class="fa-solid fa-arrow-right"></i>
           </button>
         </div>
       </div>
@@ -98,10 +95,10 @@
       <!-- Survey Nav Buttons -->
       <div class="survey-nav-actions">
         <button class="btn btn-secondary" id="btn-prev">
-          <i class="fa-solid fa-arrow-left"></i> Previous Section
+          <i class="fa-solid fa-arrow-left"></i> മുൻപത്തെ വിഭാഗം
         </button>
         <button class="btn btn-primary" id="btn-next">
-          Next Section <i class="fa-solid fa-arrow-right"></i>
+          അടുത്ത വിഭാഗം <i class="fa-solid fa-arrow-right"></i>
         </button>
       </div>
     </section>
@@ -112,18 +109,17 @@
         <div class="success-icon">
           <i class="fa-solid fa-circle-check"></i>
         </div>
-        <h1 class="card-title">Thank You!</h1>
+        <h1 class="card-title">നന്ദി!</h1>
         <p class="card-description" style="font-size: 1.15rem; max-width: 600px; margin: 0 auto 30px auto;"
           id="survey-end-note-text">
-          Thank you for participating in this study. Your response is valuable for understanding public awareness and
-          detection of AI-generated media.
+          ഈ പഠനത്തിൽ പങ്കെടുത്തതിന് നന്ദി. AI നിർമ്മിത മീഡിയയെക്കുറിച്ചുള്ള പൊതുജനങ്ങളുടെ അവബോധം മനസ്സിലാക്കാൻ നിങ്ങളുടെ പ്രതികരണം വിലപ്പെട്ടതാണ്.
         </p>
         <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 40px;">
-          Your survey responses have been securely uploaded to our database.
+          നിങ്ങളുടെ സർവ്വേ പ്രതികരണങ്ങൾ ഞങ്ങളുടെ ഡാറ്റാബേസിലേക്ക് സുരക്ഷിതമായി അപ്‌ലോഡ് ചെയ്തു.
         </p>
         <div style="display: flex; gap: 15px; justify-content: center;">
           <button class="btn btn-primary" onclick="window.location.reload();">
-            <i class="fa-solid fa-rotate-left"></i> Submit Another Response
+            <i class="fa-solid fa-rotate-left"></i> മറ്റൊരു പ്രതികരണം കൂടി നൽകുക
           </button>
         </div>
       </div>
@@ -136,12 +132,12 @@
           style="background: rgba(239, 68, 68, 0.1); color: var(--danger); box-shadow: 0 0 20px rgba(239, 68, 68, 0.2);">
           <i class="fa-solid fa-circle-xmark"></i>
         </div>
-        <h1 class="card-title">Survey Declined</h1>
+        <h1 class="card-title">സർവ്വേ നിരസിച്ചു</h1>
         <p class="card-description" style="max-width: 500px; margin: 0 auto 30px auto;">
-          You have selected not to participate. Thank you for your time. You may close this window.
+          നിങ്ങൾ പങ്കെടുക്കേണ്ടതില്ല എന്ന് തിരഞ്ഞെടുത്തു. നിങ്ങളുടെ സമയത്തിന് നന്ദി. നിങ്ങൾക്ക് ഈ വിൻഡോ അടയ്ക്കാം.
         </p>
         <button class="btn btn-secondary" onclick="window.location.reload();">
-          <i class="fa-solid fa-rotate-left"></i> Return to Welcome
+          <i class="fa-solid fa-rotate-left"></i> ഹോം പേജിലേക്ക് മടങ്ങുക
         </button>
       </div>
     </section>
@@ -153,13 +149,12 @@
           style="background: rgba(239, 68, 68, 0.1); color: var(--danger); box-shadow: 0 0 20px rgba(239, 68, 68, 0.2);">
           <i class="fa-solid fa-hand-paper"></i>
         </div>
-        <h1 class="card-title">Survey Terminated</h1>
+        <h1 class="card-title">സർവ്വേ അവസാനിപ്പിച്ചു</h1>
         <p class="card-description" style="max-width: 500px; margin: 0 auto 30px auto;">
-          Based on your responses, you do not meet the target demographic criteria for this specific research study. We
-          thank you for your interest and time!
+          നിങ്ങളുടെ പ്രതികരണങ്ങൾ അടിസ്ഥാനമാക്കി, ഈ പ്രത്യേക പഠനത്തിനായുള്ള ലക്ഷ്യവിഭാഗത്തിൽ നിങ്ങൾ ഉൾപ്പെടുന്നില്ല. നിങ്ങളുടെ താല്പര്യത്തിനും സമയത്തിനും ഞങ്ങൾ നന്ദി അറിയിക്കുന്നു!
         </p>
         <button class="btn btn-secondary" onclick="window.location.reload();">
-          <i class="fa-solid fa-rotate-left"></i> Return to Welcome
+          <i class="fa-solid fa-rotate-left"></i> ഹോം പേജിലേക്ക് മടങ്ങുക
         </button>
       </div>
     </section>
@@ -177,16 +172,17 @@
   <!-- Toast system -->
   <div class="toast" id="toast-notify">
     <i class="fa-solid fa-circle-info" id="toast-icon"></i>
-    <span id="toast-message">Notification message!</span>
+    <span id="toast-message">അറിയിപ്പ് സന്ദേശം!</span>
   </div>
 
   <!-- Footer -->
   <footer style="margin-top: 60px; padding: 30px 20px; text-align: center; border-top: 1px solid var(--border-color);">
     <p style="font-size: 0.85rem; color: var(--text-muted);">
-      &copy; 2026 Academic Research Project.
+      &copy; 2026 അക്കാദമിക് ഗവേഷണ പദ്ധതി.
     </p>
     <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 6px;">
-      Powered by Naseef</p>
+      പവേർഡ് ബൈ നസീഫ്
+    </p>
   </footer>
 
   <!-- Application Logic -->
